@@ -1,5 +1,13 @@
 #!/bin/zsh
 
+VERSION="1.0.0"
+
+# Handle version flag
+if [[ "$1" == "-v" ]]; then
+    echo "$VERSION"
+    exit 0
+fi
+
 # Check if an argument was provided
 if [[ $# -ne 1 ]]; then
     echo "Usage: $0 <path-to-app-bundle>"
